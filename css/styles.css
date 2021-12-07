@@ -522,6 +522,8 @@ input[type='submit'] {
 }
 
 .error404 {
+  padding-top: 20px;
+  padding-bottom: 130px;
   background: url(../img/error404-bg.jpg) no-repeat center / cover;
 }
 
@@ -1060,6 +1062,7 @@ input[type='submit'] {
   }
 
   .error404 {
+    padding-bottom: 20px;
     background: url(../img/404-bg-mob.png) no-repeat center top / cover;
   }
 
