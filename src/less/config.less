@@ -1,0 +1,156 @@
+// USER VARIABLES SECTION
+
+@accent: #F49D37; // Accent Color
+@fontsize: 14px; // Body Font Size
+// @lineheight: 1.875; // Document Line Height
+@ss: #A2A8B5;
+@ss1: #212736;
+@ss2: #4D525E;
+@ss3: #737783;
+@ss4: #A2A8B5;
+@ss5: #CACDD7;
+@ss6: #E9E9F1;
+@white: #ffffff;
+@black: #0C0E15;
+
+
+@userfont: 'Gilroy', Arial, sans-serif;
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Regular.eot');
+	src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Gilroy-Regular.woff') format('woff'),
+	url('../fonts/Gilroy-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Bold.eot');
+	src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Gilroy-Bold.woff') format('woff'),
+	url('../fonts/Gilroy-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+.reset();
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	.wrapper();
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+section {
+	position: relative;
+}
+
+// :root {
+// 	--brand: @accent;
+// 	accent-color: var(--brand);
+// }
+
+// input, textarea {
+// 	outline: none;
+// 	&:focus:required:invalid { border: 3px solid @accent }
+// 	&:required:valid { border: 3px solid green }
+// }
+
+// .scroll-disabled {
+//   overflow: hidden;
+// }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	// padding-top: 60px;
+	
+	font-family: @userfont;
+	font-size: @fontsize;
+	font-weight: 400;
+	// line-height: @lineheight;
+	line-height: 1.5;
+	color: @black;
+	min-width: 320px;
+	position: relative;
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+// main {
+// 	min-height: 100vh;
+// }
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Remove all mouse-triggered focus styles without breaking keyboard accessibility
+*:focus:not(:focus-visible) { 
+	outline: none !important; 
+}
+
+// remove cross
+// input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+// input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-results-button,
+// input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+// fix safari
+input[type='submit'] { 
+	-webkit-appearance: none; 
+	-moz-appearance: none; 
+	appearance: none; 
+}
+
+.text-center {
+	text-align: center;
+}

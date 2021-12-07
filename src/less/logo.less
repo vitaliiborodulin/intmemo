@@ -1,0 +1,42 @@
+.logo {
+	display: flex;
+	align-items: center;
+	color: #F7F7FA;
+	font-size: 20px;
+	line-height: 100%;
+	text-transform: uppercase;
+
+	.md-block({
+		font-size: 10px;
+		
+	});
+
+	img {
+		.md-block({
+			width: 40px;
+			height: 40px;
+		});
+	}
+
+	span {
+		max-width: 165px;
+		margin-left: 11px;
+		.md(max-width, 120px);
+	}
+}
+
+.header {
+	.logo {
+		span {
+			.sm(display, none);
+		}
+	}
+}
+
+.footer {
+	.logo {
+		.md-block({
+			margin-bottom: 20px;
+		});
+	}
+}
