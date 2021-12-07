@@ -172,7 +172,7 @@
 		}
 
 		span {
-			color: @white;
+			color: @ss5;
 			font-weight: 700;
 			letter-spacing: 0.02em;
 			.xl(display, block);
@@ -206,5 +206,13 @@
 		.xl(order, -1);
 		.md(margin-bottom, 20px);
 		// .xl(text-align, right);
+
+		a {
+			transition: color 0.3s ease;
+			
+			&:hover {
+				color: @accent
+			}
+		}
 	}
 }
