@@ -3,12 +3,13 @@
 		background-color: @accent;
 		border-radius: 4px;
 		font-weight: 700;
-		font-size: 16px;
-		line-height: 130%;
+		font-size: 20px;
+		// line-height: 130%;
+		text-align: center;
 		letter-spacing: 0.02em;
 		
-		border: none;
-		padding: 12px;
+		border: 2px solid transparent;
+		padding: 12px 26px;
 		display: inline-block;
 
 		text-decoration: none;
@@ -16,6 +17,10 @@
 
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+
+		.xl-block({
+			font-size: 16px;
+		});
 
 		&:hover {
 			// animation: none;
@@ -25,3 +30,26 @@
 			background-color: #E19238;
 		}
 	}
+
+.btn-o {
+	border: 2px solid @white;
+	background: transparent;
+	box-shadow: none;
+
+	&:hover {
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		background-color: rgba(255, 255, 255, 0.3);
+	}
+}
+
+.btn-c {
+	border: 2px solid @accent;
+	color: @accent;
+	background: transparent;
+	box-shadow: none;
+
+	&:hover {
+		border: 2px solid transparent;
+		background-color: rgba(244, 157, 55, 0.3);
+	}
+}

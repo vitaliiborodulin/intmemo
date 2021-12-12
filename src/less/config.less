@@ -10,8 +10,10 @@
 @ss4: #A2A8B5;
 @ss5: #CACDD7;
 @ss6: #E9E9F1;
+@ss7: #EAEEF7;
 @white: #ffffff;
 @black: #0C0E15;
+@grey: #C4C4C4;
 
 
 @userfont: 'Gilroy', Arial, sans-serif;
@@ -62,6 +64,10 @@ section {
 	position: relative;
 }
 
+a {
+	color: @accent;
+}
+
 // :root {
 // 	--brand: @accent;
 // 	accent-color: var(--brand);
@@ -85,17 +91,11 @@ section {
   margin: -1px;
 }
 
-html, body {
-	height: 100%;
-}
-
-html.sr .load-hidden {
-	visibility: hidden;
-}
+// html, body {
+// 	height: 100%;
+// }
 
 body {
-	// padding-top: 60px;
-	
 	font-family: @userfont;
 	font-size: @fontsize;
 	font-weight: 400;
@@ -109,9 +109,69 @@ body {
 	overflow-x: hidden;
 }
 
-// main {
-// 	min-height: 100vh;
-// }
+body.home {
+	section {
+		padding-top: 170px;
+		padding-bottom: 130px;
+
+		.xl-block({
+			padding-top: 120px;
+			padding-bottom: 100px;
+		});
+
+		.sm-block({
+			padding-top: 90px;
+			padding-bottom: 70px;
+		});
+	}
+}
+
+body:not(.home) {
+	.section__content {
+		padding-top: 100px;
+		padding-bottom: 130px;
+
+		.xl-block({
+			padding-top: 80px;
+			padding-bottom: 100px;
+		});
+
+		.sm-block({
+			padding-top: 50px;
+			padding-bottom: 70px;
+		});
+	}
+
+}
+
+.section__title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 100%;
+	letter-spacing: 0.03em;
+
+	span {
+		display: block;
+		color: @accent;
+	}
+
+	.xl-block({
+		font-size: 45px;
+		line-height: 110%;
+		letter-spacing: 0.02em;
+	});
+
+	.sm-block({
+		font-size: 30px;
+		line-height: 115%;
+	});
+}
+
+main {
+	// min-height: 100vh;
+	min-height: 500px;
+}
 
 /* Наследуем шрифты для инпутов и кнопок */
 input,

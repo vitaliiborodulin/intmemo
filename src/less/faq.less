@@ -1,0 +1,148 @@
+.faq {
+	.section__content {
+		.row-flex();
+	}
+
+	&__left {
+		.col();
+		.size(4);
+		.size-xl(12);
+	}
+
+	&__right {
+		.col();
+		.size(8);
+		.size-xl(12);
+	}
+
+	&__title {
+		margin-bottom: 60px;
+		.sm(margin-bottom, 50px);
+	}
+
+	&__item {
+		margin-bottom: 40px;
+		.xl(margin-bottom, 20px);
+	}
+	
+	&__question {
+		position: relative;
+		cursor: pointer;
+
+		padding-top: 20px;
+		padding-right: 80px;
+		padding-bottom: 15px;
+		border-top: 2px solid @ss2;
+
+		.xl-block({
+			padding-right: 50px;
+		});
+
+		.sm-block({
+			padding-top: 10px;
+		});
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			background: linear-gradient(@ss2,@ss2),linear-gradient(@ss2,@ss2);
+			background-position: center;
+			background-size: 100% 4px, 4px 100%; 
+			background-repeat: no-repeat;
+			transition: all 0.3s ease;
+
+			.xl-block({
+				width: 30px;
+				height: 30px;
+			});
+			.sm(top, 10px);
+		}
+
+		&:hover {
+			.faq__header {
+				color: @accent;
+			}
+			&::before {
+				transform: rotate(180deg);
+			}
+		}
+
+		.faq__header {
+			font-weight: 700;
+			font-size: 45px;
+			line-height: 110%;
+			letter-spacing: 0.02em;
+			transition: color 0.3s ease;
+
+			color: @ss2;
+
+			.xl-block({
+				font-size: 30px;
+				line-height: 115%;
+			});
+
+			.sm-block({
+				font-size: 20px;
+				line-height: 130%;
+			});
+		}
+	}
+
+	&__question--open {
+		.faq__header {
+			color: @ss1;
+		}
+		
+    &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(@ss1,@ss1);
+        background-position: center;
+        background-size: 100% 4px;
+        background-repeat: no-repeat;
+
+				.xl-block({
+					width: 30px;
+					height: 30px;
+				});
+
+				.sm(top, 10px);
+    }
+
+		&:hover {
+			color: @ss1;
+
+			&::before {
+				transform: none;
+			}
+
+			.faq__header {
+				color: @ss1;
+			}
+		}
+	}
+
+	&__answer {
+		max-width: 700px;
+		font-size: 20px;
+		line-height: 160%;
+
+		color: @ss2;
+
+		.xl-block({
+			font-size: 16px;
+			line-height: 160%;
+		});
+		.sm(font-size, 14px);
+	}
+}

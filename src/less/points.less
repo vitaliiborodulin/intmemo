@@ -1,0 +1,56 @@
+.points {
+	padding: 35px 35px 27px;
+
+	color: @white;
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(70px);
+
+	border: 2px solid #676A6F;
+	border-radius: 20px;
+
+	.xl-block({
+		border-radius: 0;
+		border: none;
+	});
+
+	.sm-block({
+		padding: 15px;
+	});
+
+	&__list {
+		.row-flex();
+	}
+
+	&__item {
+		.col();
+		.size(2);
+		.size-xl(4);
+		.size-sm(6);
+		.xl(margin-bottom, 20px);
+		.sm(margin-bottom, 10px);
+	}
+
+	&__picture {
+		img {
+			.xl-block({
+				width: 24px;
+				height: 24px;
+			});
+			.sm-block({
+				width: 14px;
+				height: 14px;
+			});
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 160%;
+		color: @ss5;
+
+		.sm-block({
+			font-size: 12px;
+			line-height: 130%;
+		});
+	}
+}
