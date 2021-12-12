@@ -11,13 +11,13 @@
 	<meta property="og:description" content="Интерактивный мемориал" />
 	<meta property="og:image" content="img/og-img.jpg" /> -->
 
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="css/styles.css?v=1">
 </head>
 <!-- end head -->
 
-<body class="home">
+<body>
 
     <!-- header -->
     <header class="header">
@@ -29,9 +29,9 @@
                 </a>
     
                 <ul class="header__menu">
-                    <li><a href="#">Пример QR</a></li>
-                    <li><a href="#">Цена</a></li>
-                    <li><a href="#">Вопрос / Ответ</a></li>
+                    <li><a href="sample.html">Пример QR</a></li>
+                    <li><a href="price.html">Цена</a></li>
+                    <li><a href="faq.html">Вопрос / Ответ</a></li>
                     <li class="current-menu-item"><a href="contacts.html">Контакты</a></li>
                 </ul>
     
@@ -43,7 +43,7 @@
                     <a class="header__tel" href="tel:+79377200581">+7 (937) 720-05-81</a>
                 </div>
     
-                <div class="header__burger">Меню</div>
+                <div class="header__burger"><span></span></div>
             </div>
         </div>
     </header>
@@ -51,14 +51,18 @@
 
     <main>
 
-        <section style="min-height: 100vh; padding: 50px 0;">
+        <section style="min-height: 100vh; padding: 50px 0; font-size: 20px;">
             <div class="container">
                 <ul>
+                    <li><a href="home.html">Главная</a></li>
+                    <li><a href="sample-base.html">Пример базовый</a></li>
+                    <li><a href="sample-premium.html">Пример премиум</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                     <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="price.html">Цена</a></li>
                     <li><a href="error404.html">404</a></li>
                     <li><a href="privacy.html">Политика конфиденциальности</a></li>
-                    <li><a href="ui-kit.html">UI KIT</a></li>
+                    <!-- <li><a href="ui-kit.html">UI KIT</a></li> -->
                 </ul>
             </div>
         </section>
@@ -86,9 +90,9 @@
                         <div class="footer__box footer__box--menu">
                             <h2>Меню</h2>
                             <ul class="footer__menu">
-                                <li><a href="#">Пример QR</a></li>
-                                <li><a href="#">Цена</a></li>
-                                <li><a href="#">Вопрос / Ответ</a></li>
+                                <li><a href="sample.html">Пример QR</a></li>
+                                <li><a href="price.html">Цена</a></li>
+                                <li><a href="faq.html">Вопрос / Ответ</a></li>
                                 <li><a href="contacts.html">Контакты</a></li>
                             </ul>
                         </div>
@@ -145,13 +149,29 @@
         </div>
     </footer>
     
-    <!-- <link rel="stylesheet" href="css/glightbox.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <script src="js/glightbox.min.js"></script>
-    <script src="js/swiper-bundle.min.js"></script> -->
-    <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script> -->
+    <!-- popup -->
+    <div id="request-full" class="popup__box" style="display: none">
+        <div class="popup__inner">
+            <h3 class="popup__header text-center">Заявка на создание “Страницы памяти”</h3>
+            <div class="text-center">
+                <p>
+                    Выберите тариф
+                </p>
+            </div>
+    
+        </div>
+    </div>
+    <!-- end popup -->
+    
+    
+    
+    <!--<link rel="stylesheet" href="css/swiper-bundle.min.css">
+    	<script src="js/swiper-bundle.min.js"></script> -->
     <script src="js/scrollreveal.min.js"></script>
-    <script src="js/main.js?v=1"></script>
+    <link rel="stylesheet" href="css/glightbox.min.css">
+    <script src="js/glightbox.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src="js/main.js?v=2"></script>
     <!-- end footer -->
 
 </body>
