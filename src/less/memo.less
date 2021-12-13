@@ -11,6 +11,7 @@
 	&__nav {
 		margin-right: 30px;
 		width: 300px;
+		.md(display, none);
 	}
 
 	&__title {
@@ -23,18 +24,38 @@
 		span {
 			color: inherit;
 		}
+
+		.xl-block({
+			margin-bottom: 30px;
+		});
+
+		.sm-block({
+			margin-bottom: 15px;
+		});
 	}
 
 
 
 
 	&__header {
+		margin-bottom: 50px;
 		font-weight: 700;
 		font-size: 45px;
 		line-height: 110%;
 		
 		letter-spacing: 0.02em;
 		color: @ss1;
+
+		.xl-block({
+			margin-bottom: 30px;
+			font-size: 30px;
+			line-height: 115%;
+		});
+
+		.sm-block({
+			font-size: 20px;
+			line-height: 130%;
+		});
 	}
 
 	.bb {
@@ -56,10 +77,6 @@
 		margin-bottom: 90px;
 		padding-bottom: 34px;
 
-		.memo__header {
-			margin-bottom: 50px;
-		}
-
 		&-content {
 			.row-flex();
 		}
@@ -67,8 +84,11 @@
 		&-text {
 			.col();
 			.size(4);
+			.size-md(12);
 			position: relative;
 			padding-left: 25px;
+
+			.md(margin-bottom, 10px);
 
 			&::before {
 				position: absolute;
@@ -100,23 +120,20 @@
 		.memo__map {
 			.col();
 			.size(8);
+			.size-md(12);
 		}
 	}
 
 	&__map {
-
 		width: 625px;
 		height: 400px;
-		background: url(../img/memo-map.jpg) no-repeat center/cover;
+		background: url(../img/memo-map-premium.jpg) no-repeat center/cover;
+		border-radius: 10px;
 	}
 
 	&__links {
 		margin-bottom: 90px;
 		padding-bottom: 45px;
-
-		.memo__header {
-			margin-bottom: 50px;
-		}
 
 		ul {
 			display: flex;
@@ -167,8 +184,8 @@
 		.memo__header {
 			// position: relative;
 			max-width: 550px;
-			margin: 0 auto;
-			margin-bottom: 50px;
+			margin-left: auto;
+			margin-right: auto;
 			text-align: center;
 
 			// &::before {
@@ -181,5 +198,12 @@
 			// 	background: url(../img/memo-qr.svg) no-repeat;
 			// }
 		}
+	}
+}
+
+
+.memo.memo--base {
+	.memo__map {
+		background: url(../img/memo-map-base.jpg) no-repeat center/cover;
 	}
 }
