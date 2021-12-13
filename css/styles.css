@@ -1029,6 +1029,7 @@ input[type='submit'] {
 }
 
 .memo__header {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 45px;
   line-height: 110%;
@@ -1054,10 +1055,6 @@ input[type='submit'] {
 .memo__location {
   margin-bottom: 90px;
   padding-bottom: 34px;
-}
-
-.memo__location .memo__header {
-  margin-bottom: 50px;
 }
 
 .memo__location-content {
@@ -1114,16 +1111,13 @@ input[type='submit'] {
 .memo__map {
   width: 625px;
   height: 400px;
-  background: url(../img/memo-map.jpg) no-repeat center / cover;
+  background: url(../img/memo-map-premium.jpg) no-repeat center / cover;
+  border-radius: 10px;
 }
 
 .memo__links {
   margin-bottom: 90px;
   padding-bottom: 45px;
-}
-
-.memo__links .memo__header {
-  margin-bottom: 50px;
 }
 
 .memo__links ul {
@@ -1173,9 +1167,13 @@ input[type='submit'] {
 
 .memo__qr .memo__header {
   max-width: 550px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+}
+
+.memo.memo--base .memo__map {
+  background: url(../img/memo-map-base.jpg) no-repeat center / cover;
 }
 
 .faq .section__content {
@@ -1371,9 +1369,6 @@ input[type='submit'] {
   -webkit-column-count: 2;
      -moz-column-count: 2;
           column-count: 2;
-  -webkit-column-width: 190px;
-     -moz-column-width: 190px;
-          column-width: 190px;
 }
 
 .price__points li {
@@ -1963,6 +1958,22 @@ input[type='submit'] {
     font-size: 14px;
   }
 
+  .sample__banner {
+    padding: 20px 0;
+    font-size: 45px;
+    line-height: 110%;
+  }
+
+  .memo__title {
+    margin-bottom: 30px;
+  }
+
+  .memo__header {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 115%;
+  }
+
   .faq__left {
     width: calc(100% - 30px);
   }
@@ -2243,6 +2254,28 @@ input[type='submit'] {
     padding: 10px 0;
   }
 
+  .sample__banner {
+    padding: 15px 0;
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .memo__nav {
+    display: none;
+  }
+
+  .memo__location-text {
+    width: calc(100% - 30px);
+  }
+
+  .memo__location-text {
+    margin-bottom: 10px;
+  }
+
+  .memo__location .memo__map {
+    width: calc(100% - 30px);
+  }
+
   .price__list {
     overflow-x: scroll;
     padding-bottom: 30px;
@@ -2472,7 +2505,7 @@ input[type='submit'] {
   }
 
   .footer__top .footer__left {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .footer__info {
@@ -2481,6 +2514,15 @@ input[type='submit'] {
 
   .breadcrumbs {
     padding: 5px 0;
+  }
+
+  .memo__title {
+    margin-bottom: 15px;
+  }
+
+  .memo__header {
+    font-size: 20px;
+    line-height: 130%;
   }
 
   .faq__title {
