@@ -1,0 +1,118 @@
+.banner {
+	z-index: 2;
+	// overflow-x: hidden;
+	color: @white;
+
+	&__content {
+		.row-flex();
+	}
+
+	&__text {
+		.col();
+		.size(6);
+		.size-md(8);
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		text-transform: none;
+		.xl(margin-bottom, 10px);
+	}
+
+	&__descr {
+		margin-bottom: 67px;
+		font-size: 20px;
+		line-height: 160%;
+
+		.xl-block({
+			margin-bottom: 23px;
+			font-size: 16px;
+		});
+	}
+
+	&__btn {
+		width: 290px;
+	}
+
+	&__image {
+		.size-md(4);
+		position: relative;
+		.col();
+		.size(6);
+		.md(position, static);
+		
+		img {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(1.1);
+
+			.xl-block({
+				// position: static;
+				left: 50%;
+				top: 33%;
+				transform: translateX(-50%) rotate(21deg) scale(1.35);
+			});
+
+			.md-block({
+				// width: 180px;
+				// height: 180px;
+				top: -56px;
+				left: 60%;
+				transform: rotate(21deg);
+			});
+		}
+
+		&--desk {
+			.xl(display, none);
+		}
+
+		&--mob {
+			display: none;
+			.xl(display, block);
+		}
+	}
+
+	&__form-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		margin-bottom: 30px;
+		.xl(margin-bottom, 23px);
+		.md(margin-bottom, 15px);
+	}
+
+	.form__wrapper {
+		margin-bottom: 10px;
+	}
+
+	.form__input {
+		width: 290px;
+	}
+
+}
+
+.home {
+	.banner {
+		padding: 125px 0;
+
+		.xl-block({
+			padding: 55px 0;
+		})
+	}
+}
+
+.banner--top {
+	background: #444A59 url(../img/banner-top-bg.jpg) no-repeat center/cover;
+
+	.banner__descr {
+		margin-bottom: 35px;
+		.xl(margin-bottom, 23px);
+		.sm(margin-bottom, 15px);
+	}
+}
+
+.banner--bottom {
+	background: #444A59 url(../img/banner-bottom-bg.jpg) no-repeat center/cover;
+}
