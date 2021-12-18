@@ -1,4 +1,11 @@
 .present {
+	background: #fafafc;
+
+	&__title {
+		margin-bottom: 100px;
+		.xl(margin-bottom, 15px);
+	}
+
 	&__container {
 		.row-flex();
 	}
@@ -13,6 +20,7 @@
 		position: relative;
 		.xl-block({
 			display: flex;
+			min-height: 74px;
 		});
 	}
 
@@ -20,7 +28,13 @@
 		.col();
 		.size(6);
 		.size-xl(12);
-		.xl(order, -1);
+
+		margin-top: -150px;
+
+		.xl-block({
+			order: -1;
+			margin-top: 0;
+		});
 	}
 
 	&__pics {
@@ -60,7 +74,7 @@
 		max-width: 400px;
 		padding-bottom: 10px;
 		margin-bottom: 30px;
-		border-bottom: 2px solid #F0F0F5;
+		border-bottom: 2px solid @ss6;
 
 		.xl-block({
 			position: static;

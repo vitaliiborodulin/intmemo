@@ -139,9 +139,9 @@
 	}
 
 	&__form {
-		color: @white;
+		
 		padding: 70px 43px;
-		background-color: @ss1;
+		
 		border-radius: 20px;
 		margin-top: -234px;
 
@@ -183,6 +183,7 @@
 		&__title {
 			margin-bottom: 10px;
 	
+			font-weight: 400;
 			font-size: 30px;
 			line-height: 115%;
 			letter-spacing: 0.02em;
@@ -221,9 +222,21 @@
 			}
 		}
 
+		&__label {
+			font-size: 12px;
+			color: @ss6;
+		}
+
+		&__input {
+			border-radius: 2px;
+		}
+
 		&__btn {
 			position: relative;
 			z-index: 2;
+
+			display: block;
+			width: 100%;
 
 			// &:hover {
 			// 	transform: none;

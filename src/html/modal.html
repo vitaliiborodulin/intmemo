@@ -1,0 +1,131 @@
+<div class="modal micromodal-slide" id="modal-request" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true">
+
+            <form class="form" id="request-full-form" method="post" action="#">
+                <button aria-label="close modal" class="modal-close" data-micromodal-close></button>
+                <h2 class="form__title">Заявка на создание <span>“Страницы памяти”</span></h2>
+
+                <div class="form__box">
+                    <fieldset>
+                        <legend>1. Данные покойного</legend>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="fio">Ф.И.О.</label>
+                            <input class="form__input" type="text" id="fio" name="fio" placeholder="Укажите полные Ф.И.О.">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="birth-date">Дата рождения</label>
+                            <input class="form__input" type="date" id="birth-date" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="birth-place">Место рождения</label>
+                            <input class="form__input" type="text" id="birth-place" placeholder="Введите текст">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="die-date">Дата смерти</label>
+                            <input class="form__input" type="date" id="die-date" placeholder="дд.мм.гггг">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="die-place">Место смерти</label>
+                            <input class="form__input" type="text" id="die-place" placeholder="Введите текст">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="birth">Гражданство</label>
+                            <input class="form__input" type="text" id="birth" placeholder="Укажите гражданство">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>2. Родственники</legend>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="relatives">Родственники</label>
+                            <textarea class="form__input" id="relatives" placeholder="Введите текст"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>3. Биография</legend>
+                        <p class="form__info">Напишите всё, что хотите рассказать, о своём родсвеннике:</p>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="educ">Образование</label>
+                            <textarea class="form__input" id="educ" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="job">Карьера (Род деятельности)</label>
+                            <textarea class="form__input" id="job" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="dop-info">Дополнительная информация</label>
+                            <textarea class="form__input" id="dop-info" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="words">Слова близких</label>
+                            <textarea class="form__input" id="words" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="achiv">Достижения</label>
+                            <textarea class="form__input" id="achiv" placeholder="Введите текст"></textarea>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="links">Ссылки</label>
+                            <textarea class="form__input" id="links" placeholder="Введите текст"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>4. Место захоронения</legend>
+                        <p class="form__info">Укажите адрес, ряд и номер места, где находится могила. По возможности, добавьте точные координаты места захоронения вашего родственника</p>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="grave">Укажите адрес, ряд и номер места</label>
+                            <input class="form__input" type="text" id="grave" placeholder="Введите текст">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="coords">Координаты захоронения</label>
+                            <input class="form__input" type="text" id="coords" placeholder="Введите текст">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>5. Файлы</legend>
+                        <p class="form__info">Прикрепите все фото, видео и аудио материалы, которые вы бы хотели видеть на “Странице памяти” вашего близкого человека. Укажите фото для обложки</p>
+                        <div class="form__wrapper">
+                            <input class="form__input" type="file" id="files" name="files[]" multiple>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>6. Ваши контактные данные</legend>
+                        <p class="form__info">Ваш номер телефона нужен для подтверждения услуги и её оплаты</p>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="contacts_name">Имя</label>
+                            <input class="form__input" type="text" id="contacts_name" name="contacts_name" placeholder="Введите ваше имя">
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="contacts_phone">Телефон</label>
+                            <input class="form__input" type="text" id="contacts_email" name="contacts_phone" placeholder="8 (___) ___-__-__">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>7. Адрес доставки</legend>
+                        <div class="form__info">Укажите полный адрес, по которому мы произведём доставку вашего QR-кода по вашем месту жительства или же сразу в похоронное бюро. Например,
+                            <ul>
+                                <li>г. Москва, ул. Тверская, дом 13, кв. 74</li>
+                                <li>или г. Волгоград, компания ООО «Пантеон»</li>
+                            </ul>
+                        </div>
+                        <div class="form__wrapper">
+                            <label class="form__label" for="delivery">Адрес доставки</label>
+                            <textarea class="form__input" id="delivery" name="delivery" placeholder="Укажите адрес"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form__btns">
+                        <button class="btn form__btn" type="submit">Отправить данные</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

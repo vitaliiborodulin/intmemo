@@ -11,7 +11,6 @@ module.exports = {
         },
         // lg: {
         //     width: '992px',
-        //     fields: '70px'
         // },
         md: {
             width: '768px',
