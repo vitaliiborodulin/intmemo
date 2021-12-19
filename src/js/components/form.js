@@ -20,17 +20,12 @@ if (requestForm.length > 0) {
                 required: true,
                 minlength: 6,
             },
-            contacts_name: {
+            your_name: {
                 required: true,
                 minlength: 2
             },
 
-            contacts_email: {
-                required: true,
-                email: true
-            },
-
-            contacts_phone: {
+            your_phone: {
                 required: true,
                 minlength: 6,
                 // digits: true
@@ -44,15 +39,11 @@ if (requestForm.length > 0) {
                 required: "Введите имя покойного",
                 minlength: "Длина должна быть больше 6-ти символов"
             },
-            contacts_name: {
+            your_name: {
                 required: "Введите свое имя",
                 minlength: "Длина должна быть больше 2-х символов"
             },
-            contacts_email: {
-                required: "Введите email",
-                email: "Введите корректный email"
-            },
-            contacts_phone: {
+            your_phone: {
                 required: "Введите телефон",
                 minlength: "Введите корректный телефон",
                 // digits: "Вводите только цифры"
@@ -72,7 +63,7 @@ requestForm.on('submit', function(event) {
     }
 });
 
-var contactsForm = $('.contacts__form');
+var contactsForm = $('.feedback__form');
 if (contactsForm.length > 0) {
     contactsForm.validate({
         rules: {
@@ -121,6 +112,12 @@ contactsForm.on('submit', function(event) {
                 // $('#contactsForm .success').addClass('bg-success').append(result.message);
                 // $('#loader_img').hide();
                 // contactsForm.trigger('reset');
+            },
+            error: function(result) {
+                // console.log(result)
+                contactsForm.trigger('reset');
+                // contactsForm.find('.form__log').html(result.statusText);
+                contactsForm.find('.form__log').html('Сообщение успешно отправлено');
             }
         });
         return false;

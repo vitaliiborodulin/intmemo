@@ -26,6 +26,7 @@
         "smart-grid": "^2.1.2"
     },
     "dependencies": {
-        "jquery.maskedinput": "^1.4.1"
+        "jquery.maskedinput": "^1.4.1",
+        "micromodal": "^0.4.10"
     }
 }

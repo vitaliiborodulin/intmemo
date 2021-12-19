@@ -1,0 +1,13 @@
+.title-animation-idle {
+  display: block;
+  -webkit-transform: translate(0, 5rem);
+          transform: translate(0, 5rem);
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.title-animation-idle.activate-animation {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}

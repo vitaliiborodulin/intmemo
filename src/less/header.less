@@ -15,9 +15,77 @@
 		align-items: center;
 	}
 
+	&__mob {
+		display: none;
+
+		&-cont {
+			height: 20vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 1rem 0;
+			border-top: 2px solid @ss2;
+			border-bottom: 2px solid @ss2;
+
+			a {
+				padding: 5px;
+
+				&:first-of-type {
+					font-weight: 700;
+					font-size: 30px;
+					line-height: 115%;
+					letter-spacing: 0.02em;
+					color: @accent;
+				}
+				&:last-of-type {
+					font-weight: 700;
+					font-size: 20px;
+					line-height: 130%;
+					color: @ss5;
+				}
+			}
+		}
+
+		&-req {
+			padding: 0.5rem 0;
+			// height: 40vh;
+			// display: flex;
+			// flex-direction: column;
+			// justify-content: space-around;
+			// padding-top: 25px;
+			// border-top: 2px solid @ss2;
+
+			ul {
+				margin-bottom: 1rem;
+				height: 30vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+
+			li {
+				// margin-bottom: 0.5rem;
+				font-size: 14px;
+				line-height: 110%;
+				letter-spacing: 0.02em;
+				color: @accent;
+				span {
+					display: block;
+					font-weight: 700;
+					color: @ss5;;
+				}
+			}
+			p {
+				font-size: 12px;
+				line-height: 130%;
+				letter-spacing: 0.02em;
+				color: @ss5;
+			}
+		}
+	}
+
 	&__menu {
-		display: flex;
-		
+
 		.xl-block( {
 			text-align      : center;
 			transform       : translateX(-150%);
@@ -38,19 +106,16 @@
 			padding         : 40px;
 			color           : @white;
 			background-color: @black;
-
-			li {
-					margin-bottom: 20px;
-					font-size    : 30px;
-					margin       : 10px;
-					padding      : 10px;
-			}
 	});
 
-	&.header__menu--open {
-		transform: translateX(0);
-	}
-		
+	&-nav {
+		display: flex;
+		.xl-block({
+			flex-direction: column;
+			justify-content: space-around;
+			height: 50vh;
+		});
+
 		a {
 			font-size: 16px;
 			line-height: 26px;
@@ -61,6 +126,9 @@
 				color: @accent;
 			}
 		}
+	}
+		
+		
 
 		.current-menu-item {
 			a {
@@ -68,7 +136,21 @@
 				border-bottom: 4px solid @accent;
 			}
 		}
+
+		&.header__menu--open {
+			transform: translateX(0);
+
+			.header__mob {
+				display: block;
+			}
+
+			.current-menu-item a{
+				border-bottom: none;
+			}
+		}
 	}
+
+
 
 	&__contacts {
 		display: flex;

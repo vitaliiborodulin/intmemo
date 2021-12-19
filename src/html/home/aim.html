@@ -36,11 +36,11 @@
             </div>
             <div class="aim__right">
                 <div class="aim__right-wrapper">
-                    <div class="aim__box">
+                    <div class="aim__box title-animation-idle">
                         <h3 class="aim__header">Наш проект поможет Вам сохранить память о любимых, близких и дорогих для Вас людях</h3>
                         <p class="aim__descr">Создав в сети интерактивную страницу, Вы сможете всегда быть рядом с близким человеком: воссоздать его образ, видеть и слышать его, почувствовать ментальную связь</p>
                     </div>
-                    <div class="aim__box">
+                    <div class="aim__box title-animation-idle">
                         <h3 class="aim__header">Интерактивный мемориал- это ключик к бесконечной памяти </h3>
                         <p class="aim__descr">Жизненные истории, фотографии, голоса и улыбки – все это будет надежно храниться в течение долгих лет. Для быстрого доступа к ценной информации на памятник крепится специальный QR-код, с помощью которого Вы сможете посетить Интерактивный
                             мемориал в любое время </p>
@@ -52,8 +52,18 @@
     </div>
 
     <div class="aim__picture">
-        <img class="aim__picture--desk" src="img/aim-pic.jpg" alt="Интерактивный мемориал демонстрация" width="1280" height="600">
-        <img class="aim__picture--mob" src="img/aim-pic-mob.jpg" alt="" width="320" height="250">
+        <picture class="aim__picture--desk">
+            <source srcset="img/aim-pic.webp" type="image/webp">
+            <source srcset="img/aim-pic.jpg" type="image/jpeg">
+            <img src="img/aim-pic.jpg" lt="Интерактивный мемориал демонстрация" width="1280" height="600">
+        </picture>
+        <!-- <img class="aim__picture--desk" src="img/aim-pic.jpg" alt="Интерактивный мемориал демонстрация" width="1280" height="600"> -->
+        <picture class="aim__picture--mob">
+            <source srcset="img/aim-pic-mob.webp" type="image/webp">
+            <source srcset="img/aim-pic-mob.jpg" type="image/jpeg">
+            <img src="img/aim-pic-mob.jpg" alt="Интерактивный мемориал демонстрация моб" width="320" height="250">
+        </picture>
+        <!-- <img class="aim__picture--mob" src="img/aim-pic-mob.jpg" alt="" width="320" height="250"> -->
     </div>
 
 </section>
