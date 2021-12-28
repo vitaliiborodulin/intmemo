@@ -25,5 +25,10 @@ $(function() {
     //= components/sticky.js
     //= components/aside.js
     //= components/form.js
+    //= components/grid.js
+    //= components/tip.js
+    //= components/audio-player.js
+
+    // $("input[type=file]").fileinput($("#replacement").remove());
 
 })

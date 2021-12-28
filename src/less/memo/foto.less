@@ -1,0 +1,68 @@
+.memo {
+	&__btns {
+		text-align: center;
+	}
+	
+	&__foto {
+		padding-bottom: 50px;
+	
+		.grid {
+			// margin-bottom: 40px;
+			// .xs(margin-bottom, 40px);
+			// .sm(margin-bottom, 30px);
+		}
+	
+		.grid-item { 
+			// padding: 5px;
+			// width: 20%;
+			width: 238px;
+			height: 238px;
+			position: relative;
+			overflow: hidden;
+
+			.md-block({
+				width: 138px;
+				height: 138px;
+				// padding: 2px;
+				// width: 25%;
+			});
+			// .sm(width, 33%);
+
+			img {
+				width: 238px;
+				height: 238px;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+
+				.md-block({
+					width: 138px;
+					height: 138px;
+				});
+
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+		// .grid-item--width2 { 
+		// 	width: 40%; 
+		// }
+	}
+	
+	&__foto-list {
+		margin-bottom: 40px;
+		.xl(margin-bottom, 30px);
+		.sm(margin-bottom, 20px);
+
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		
+
+		&--hidden {
+			// > li {
+			// 	display: none;
+			// }
+		}
+	}
+}

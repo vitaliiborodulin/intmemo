@@ -1,8 +1,8 @@
 const section = $('.memo__section');
 
-if (section.lenght > 0) {
+if (section) {
 
-    const nav = $('.memo__nav > ul'),
+    var nav = $('.memo__nav > ul'),
         navHeight = nav.outerHeight();
 
     window.addEventListener('orientationchange', function() {

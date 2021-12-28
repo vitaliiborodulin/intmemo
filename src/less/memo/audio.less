@@ -1,0 +1,166 @@
+.memo__audio {
+	padding-bottom: 30px;
+
+	.player {
+		background: transparent url("../img/audio-player/spr.png") no-repeat scroll center top;
+		height: 162px;
+		position: relative;
+		width: 326px;
+		z-index: 2;
+
+		.xs(margin-left, -15px);
+	}
+	.title, .artist {
+		font-family: verdana;
+		left: 167px;
+		position: absolute;
+
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	.title {
+		color: #FFFFFF;
+		font-size: 14px;
+		font-weight: bold;
+		top: 23px;
+		width: 75px;
+
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.artist {
+		color: #EEEEEE;
+		font-size: 12px;
+		top: 40px;
+	}
+	.pl {
+		background: url("../img/audio-player/pl.svg") no-repeat;
+		cursor: pointer;
+		height: 34px;
+		left: 270px;
+		position: absolute;
+		top: 20px;
+		width: 32px;
+	}
+	.pl:hover {
+		top: 21px;
+	}
+	// .cover {
+	// 	background: transparent url(../img/audio-player/cover2.jpg) no-repeat scroll center top;
+	// 	border-radius: 5px 5px 5px 5px;
+	// 	height: 94px;
+	// 	left: 20px;
+	// 	position: absolute;
+	// 	top: 20px;
+	// 	width: 94px;
+	// }
+	.controls {
+		cursor: pointer;
+		height: 23px;
+		left: 167px;
+		position: absolute;
+		top: 65px;
+		width: 138px;
+	}
+	.controls .play, .controls .pause, .controls .rew, .controls .fwd {
+		background: transparent url("../img/audio-player/spr.png") no-repeat scroll 0 0;
+		float: left;
+		height: 100%;
+		width: 33%;
+	}
+	.controls .play {
+		background-position: -8px -171px;
+	}
+	.controls .pause {
+		background-position: -8px -198px;
+		display: none;
+	}
+	.controls .rew {
+		background-position: -54px -171px;
+	}
+	.controls .fwd {
+		background-position: -100px -171px;
+	}
+	.controls .play:hover {
+		background-position: -8px -170px;
+	}
+	.controls .pause:hover {
+		background-position: -8px -197px;
+	}
+	.controls .rew:hover {
+		background-position: -54px -170px;
+	}
+	.controls .fwd:hover {
+		background-position: -100px -170px;
+	}
+	.hidden {
+		display: none;
+	}
+	.controls .visible {
+		display: block;
+	}
+	.volume {
+		height: 11px;
+		left: 186px;
+		position: absolute;
+		top: 96px;
+		width: 112px;
+	}
+	.tracker {
+		height: 15px;
+		left: 20px;
+		position: absolute;
+		top: 124px;
+		width: 285px;
+	}
+	.ui-slider-range {
+		background: transparent url("../img/audio-player/spr.png") no-repeat scroll 5px -222px;
+		height: 100%;
+		position: absolute;
+		top: 2px;
+	}
+	.ui-slider-handle {
+		cursor: pointer;
+		height: 10px;
+		margin-left: -5px;
+		position: absolute;
+		top: 4px;
+		width: 10px;
+		z-index: 2;
+		background-color: @ss6;
+		border-radius: 50%;
+		outline-color: @white;
+	}
+	.volume .ui-slider-handle {
+		// background: url("../img/audio-player/spr.jpg") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+		// background-color: @ss6;
+		border-radius: 50%;
+		height: 13px;
+		width: 13px;
+		top: 1px;
+	}
+	.playlist {
+		background-color: #333333;
+		border-radius: 5px 5px 5px 5px;
+		list-style-type: none;
+		margin: -10px 0 0 2px;
+		padding-bottom: 10px;
+		padding-top: 15px;
+		position: relative;
+		// width: 326px;
+		width: 322px;
+		z-index: 1;
+
+		.xs(margin-left, -15px);
+	}
+	.playlist li {
+		color: #EEEEEE;
+		cursor: pointer;
+		margin: 0 0 5px 15px;
+	}
+	.playlist li.active {
+		font-weight: bold;
+	}
+}

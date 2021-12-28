@@ -110,9 +110,32 @@
                     <ul class="memo__info-content">
                         <li class="memo__item">
                             <div class="memo__item-title">Информация</div>
-                            <ul class="memo__info-list">
-                                <li>1</li>
-                            </ul>
+                            <div class="memo__info-wrapper">
+                                <ul class="memo__info-list">
+                                    <li>
+                                        <div class="memo__info-header memo--birth">Место рождения</div>
+                                        <div class="memo__info-text">с. Клушино, Гжатский район, Западная (Смоленская) область</div>
+                                    </li>
+                                    <li>
+                                        <div class="memo__info-header memo--citizen">Гражданство</div>
+                                        <div class="memo__info-text">СССР, Россия</div>
+                                    </li>
+                                    <li>
+                                        <div class="memo__info-header memo--educ">Образование</div>
+                                        <div class="memo__info-text">Люберецкое ремесленное училище №10 Саратовский индустриальный техникум 1-е Чкаловское ВАУЛ им. Ворошилова</div>
+                                    </li>
+                                </ul>
+                                <ul class="memo__info-list">
+                                    <li>
+                                        <div class="memo__info-header memo--death">Место смерти</div>
+                                        <div class="memo__info-text">с. Новосёлово, Владимирская область</div>
+                                    </li>
+                                    <li>
+                                        <div class="memo__info-header memo--occup">Род деятельности</div>
+                                        <div class="memo__info-text">Летчик-космонавт СССР</div>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -183,7 +206,29 @@
                             <div class="memo__location-point">г. Москва, Кремлевская стена на Красной площади</div>
                         </div>
                         <div class="memo__map">
-                            <!-- yandex map here -->
+                            <div id="map" style="width: 100%; height: 400px"></div>
+                            <script>
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    ymaps.ready(init);
+                                    var myMap,
+                                        myPlacemark;
+
+                                    function init() {
+                                        myMap = new ymaps.Map("map", {
+                                            center: [55.753486, 37.619635],
+                                            zoom: 17,
+                                            controls: ['zoomControl']
+                                        });
+                                        myMap.behaviors.disable('scrollZoom');
+                                        myPlacemark = new ymaps.Placemark([55.753486, 37.619635], {
+                                            hintContent: 'Место захоронения тут',
+
+                                            iconImageOffset: [-33, -42]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>
