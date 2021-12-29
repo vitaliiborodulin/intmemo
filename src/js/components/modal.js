@@ -45,6 +45,7 @@ var baseFormBtn = $('#form-base');
 var premFormBtn = $('#form-prem');
 var tarif = $('#tarif');
 var files = $('#files');
+var filesInfo = $('.form__info--file');
 
 priceBtn.on('click', function() {
     if ($(this).attr('data-tarif') === 'base') {
@@ -52,12 +53,14 @@ priceBtn.on('click', function() {
         premFormBtn.addClass('btn-c');
         tarif.val('base');
         files.removeAttr('multiple');
+        filesInfo.text('Загрузите главное фото для страницы памяти');
 
     } else {
         baseFormBtn.addClass('btn-c');
         premFormBtn.removeClass('btn-c');
         tarif.val('prem');
         files.attr('multiple', '');
+        filesInfo.text('Прикрепите все фото, видео и аудио материалы, которые вы бы хотели видеть на “Странице памяти” вашего близкого человека. Укажите фото для обложки');
     }
 
     checkFormTarif();
@@ -75,10 +78,12 @@ function checkFormTarif() {
                 $('.form__banner-title').text('Базовый пакет');
                 tarif.val('base');
                 files.removeAttr('multiple');
+                filesInfo.text('Загрузите главное фото для страницы памяти');
             } else {
                 $('.form__banner-title').text('Premium пакет');
                 tarif.val('prem');
                 files.attr('multiple', '');
+                filesInfo.text('Прикрепите все фото, видео и аудио материалы, которые вы бы хотели видеть на “Странице памяти” вашего близкого человека. Укажите фото для обложки');
             }
         }
     })
